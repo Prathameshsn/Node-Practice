@@ -1,0 +1,40 @@
+<html>
+<body>
+{{2+1}}
+<script>
+var a = [9,8,3,2,5,8];
+
+
+for(var i=0;i<a.length;i++) {
+for(var j=i+1;j<a.length;j++) {
+    if(a[i]>a[j]) {
+    var temp = a[j];
+    a[j] = a[i];
+    a[i] = temp;
+    }
+}
+}
+
+// for(var i=0;i<a.length;i++) {
+// for(var j=i+1;j<a.length;j++) {
+//     if(a[i] == a[j]) {
+//     var temp = a[a.length-1];
+//     a[a.length-1] = a[j];
+//     a[j] = temp;
+//     a.length = a.length-1
+//     }
+// }
+// }
+var temp = [];
+for(var i=0;i<a.length-1;i++) {
+    if(a[i] != a[i+1]) {
+        temp.push(a[i]);
+    }
+}
+temp[temp.length] = a[a.length-1]
+a = temp;
+console.log(a)
+</script>
+
+</body>
+</html>

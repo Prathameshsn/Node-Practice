@@ -1,0 +1,31 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<body>
+    <script>
+        // $.get("text/firstText.txt", function(data) {
+        //     console.log(data);
+        // })
+
+        $.get({
+            type:"GET",
+            url:"text/firstText.txt",
+            success: function(res) {
+                document.write(res);
+                $.get({
+                    type:"GET",
+                    url:"text/secondText.txt",
+                    success: function(res) {
+                        document.write(res);
+                    },
+                    error: function(err) {
+                        document.write(err.status);
+                        document.write(err.statusText);
+                    }
+                })
+            },
+            error: function(err) {
+                document.write(err.status);
+                document.write(err.statusText);
+            }
+        })
+    </script>
+</body>

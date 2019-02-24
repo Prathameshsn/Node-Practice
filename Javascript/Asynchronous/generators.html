@@ -1,0 +1,10 @@
+<script>
+    function* print() {
+        document.write("first\n");
+        yield
+        document.write("second\n");
+        document.write("third");
+    }
+    var fn = print();
+    fn.next();
+</script>

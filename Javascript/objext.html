@@ -1,0 +1,42 @@
+<script>
+    function emp(id ,name) {
+        this.id=id;
+        this.name =name;
+        this.print = function() {
+            console.log(this.id, this.name);
+        }
+    }
+    
+    var kishor = new emp(1,"kishor");
+    var nandu = Object.create(kishor);
+
+    console.log(kishor.hasOwnProperty("id"));
+    console.log(nandu.hasOwnProperty("id"));
+
+    
+
+    // apply AND CALL
+    var object1 = {
+        print:function(a,b,c) {
+            console.log(this.num+a+b+c);
+        } 
+    }
+
+    var object2 = {
+        id:4,
+        name:"sinchan"
+    }
+    console.log(kishor.print.call(object2));
+
+    var object3 = {num:10};
+    console.log(object1.print.call(object3,1,2,3));
+    console.log(object1.print.apply(object3,[1,2,3]));
+
+    
+
+    
+   
+    
+    
+
+</script>

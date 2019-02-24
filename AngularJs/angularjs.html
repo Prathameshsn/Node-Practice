@@ -1,0 +1,26 @@
+
+ <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.8/angular-ui-router.min.js"></script>
+ 
+ <body ng-app="myApp">
+      Main Page<br>
+      <ui-view></ui-view>
+
+      <script>
+            var Module = angular.module("myApp",['ui.router']);
+            
+            Module.controller("myController", function($scope) {
+                $scope.name = "Prathamesh";
+            });
+        
+            Module.config(function($stateProvider, $urlRouterProvider) {
+                $urlRouterProvider.otherwise("/index");
+        
+                $stateProvider.state('index', {
+                    url:"/index",
+                    templateUrl:"sample.html",
+                    controller: 'myController'
+                })
+            })
+       </script>
+ </body>  

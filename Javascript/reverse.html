@@ -1,0 +1,19 @@
+<div id="demo"></div>
+
+<script>
+var arr=[1,2,3,4,5];
+
+function reverse(arr) {
+  var start=0;end=arr.length-1;
+  var arrlength=Math.round(arr.length/2);
+  for (var i = 0; i <arrlength; i++) {
+    var temp = arr[start];
+    arr[start] = arr[end];
+    arr[end] = temp;
+    start++;
+    end--;
+  }
+  return arr;
+}
+document.getElementById("demo").innerHTML=reverse(arr);
+</script>

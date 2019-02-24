@@ -1,0 +1,25 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<div id="sample" class="temp"></div>
+
+<script>
+// get class Name
+console.log($("#sample")[0].className);
+
+// put text into it
+$("#sample").html("Hello");
+document.getElementById("sample").innerHTML = "Helloo";
+
+// event
+$("#sample").on("click", function() {
+    console.log("run");
+})
+
+// ajax
+$.ajax({
+    url:"../ajax/my.js",
+    success:function(data) {
+        console.log(data);
+    }
+})
+</script>

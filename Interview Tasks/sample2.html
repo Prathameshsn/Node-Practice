@@ -1,0 +1,221 @@
+<pre>
+<script>
+
+// var arr =["a","aaa"];
+// console.log(arr.map(arrEle => arrEle.length));
+//
+// var a='2+2';
+// console.log(a);
+// console.log(eval(a));
+// console.log(typeof eval(a));
+// eval function accetp only string
+// console.log(eval(function() {}));
+//
+// if(function f() {}){
+//   console.log(typeof f);
+// }
+// console.log(typeof f);
+
+// javascript get all delation at top not initilization
+// console.log(typeof b);
+// var b =0;
+
+
+// console.log(a(2)());
+// function a(num) {
+//   return function(){
+//     console.log("run");
+//     return num;
+//   }
+// }
+//
+// console.log(mul(2)(3)(4));
+// mul(2) will return anonimous function for run that we have use () and pass aurgument
+// function mul(num1) {
+//   return function(num2) {
+//     return function (num3) {
+//       return num1*num2*num3;
+//     }
+//   }
+// }
+
+// Empty Array
+// var arr = [1,1];
+// while (arr.length) {
+//   arr.pop();
+// }
+// console.log(arr);
+// var arr2 = arr;
+// // not reference to original array it will create new memory
+// arr = [];
+// // or
+// arr.length =0;
+// console.log(arr2);
+
+// var a = (function(num){
+//   console.log(num);
+//   return num;
+// })(10)
+// console.log(a);
+
+// var arr=[];
+// console.log(arr instanceof(Object));
+
+// var variable =10;
+// call();
+// function call() {
+//   // it will be undefined bec in this function scope hoisting make declaration first
+//   console.log(variable);
+//   variable = 20;
+// }
+
+
+// function Con() {
+//   this.a= 10,
+//   this.b=0
+// }
+// var r ={}
+// Con.prototype.c=2;
+// console.dir();
+// var obj = new Con();
+// console.dir(obj);
+
+
+// function a() {
+//   console.log("run");
+// }
+// var a;
+//
+// console.log(typeof a);
+
+
+// var c = function() {
+//   console.log(arguments);
+// }
+// c(9,8)
+
+// var a=[1,2,3]
+// console. log(Math.min.apply(null,a));
+
+// this is use for referance current object in method
+// var abc={
+//   a:10,
+//   b:function() {
+//     this.bc = 20
+//   }
+// }
+
+// function a() {
+//   this.b=10
+// }
+// a.prototype.click = function() {
+//   // console.log(this);
+//   console.log(this.b+"rin");
+//   // var b = function(){
+//   //   console.log(this);
+//   // }
+//   // b()
+// }
+// var c=new a()
+// console.log(c.click());
+// var z = c.click;
+// console.log(z);
+// var arr= [1,2,3];
+// arr.forEach(function(key){
+//   console.log(key);
+// })
+
+// Arrow function
+// var a = {
+//   arr:[1,2,3,4],
+//   b:function() {
+//     // this.arr.forEach(f=> {
+//     //   console.log(this);
+//     // });
+//     var a = () => {
+//       console.log(this);
+//       return "q";
+//     }
+//     return a()
+//     // console.log(this);
+//   }
+// }
+// console.log(a.b());
+
+// var a=  {
+// ab : 10,
+// }
+// var b = Object.create(a)
+// b.c=5
+// console.log(b);
+// console.log(window.ab);
+
+// var a=[2,3,4]
+// console.log(Math.max(...a));
+// console.log(Math.max.apply(null,a));
+
+// var a= {
+//   b(){
+//   }
+// }
+// console.log(a.b);
+
+// var a = {
+//   ab() {
+//   }
+// }
+// var b={
+//   ba(){
+//   }
+// }
+// Object.assign(b,a)
+// console.log(b);
+
+// var ajaxObj = new XMLHttpRequest();
+// ajaxObj.open("GET", "my.js", true);
+// ajaxObj.send();
+// ajaxObj.onreadystatechange = function() {
+//   if(ajaxObj.status ==200 && this.readyState == 4) {
+//     console.log("File Data is: "+ajaxObj.responseText);
+//   }
+// }
+
+var arr = [1,2,3,4,5];
+// Remove duplicates
+var tempArr = [];
+// for(var i=0;i<arr.length-1;i++) {
+//   if(arr[i] != arr[i+1]) {
+//     tempArr.push(arr[i]);
+//   }
+// }
+// tempArr.push(arr[arr.length-1])
+
+// Reverse
+// var count = arr.length-1;
+// for(var i=0;i<arr.length;i++) {
+//   tempArr[count] = arr[i];
+//   count--;
+// }
+
+// Random arrange
+// for(var i=0;i<arr.length;i++) {
+//   var count = Math.round(Math.random()*10);
+//   if(count < arr.length) {
+//     tempArr[count] = arr[i];  
+//   }
+// }
+// arr = tempArr;
+// document.write(arr);
+
+// var arr = [1,2,3,4,5,6];
+
+// for(var i = arr.length-1; i>=0; i--) {
+//   for(var j = arr.length-1; j>=i; j--) {
+//     document.write(arr[j])
+//   }
+//   document.writeln()
+// }
+
+
+</script>
+</pre>

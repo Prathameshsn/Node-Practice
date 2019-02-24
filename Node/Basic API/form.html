@@ -1,0 +1,24 @@
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+<body ng-app="myApp" ng-controller="myController">
+    Name: <input type="text" ng-model="name"><br>
+    Id : <input type="text" ng-model="id"><br>
+</body>
+<button ng-click="onSubmit()">Submit</button>
+
+<script>
+    var app = angular.module("myApp",[]);
+    app.controller("myController", function ($scope,$http) {
+        $http.get("http://localhost:2000/getdata").then(function(responce) {
+            console.log(responce.data);
+        })
+    
+        $scope.onSubmit = function() {
+            var data = {name:$scope.name,id:$scope.id}
+            console.log(data);
+            $http.post("http://localhost:2000/addUser",data).then(function(responce) {
+                console.log(responce);
+            })
+        }
+    })
+</script>

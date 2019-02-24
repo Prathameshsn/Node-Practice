@@ -1,0 +1,60 @@
+<script>
+    // // factorial
+    // var number = 3;
+    // var factorial = 1;
+    // for(var i=1;i<=number;i++) {
+    //     factorial = factorial * i;
+    // }
+    // document.write(factorial);
+
+    // // prime number
+    // var number = 10;
+    // var primeFlag = true;    
+    // for(var i=2; i<number; i++) {
+    //     for(var j=1; j<=10; j++) {
+    //         if(number == i*j) {
+    //             primeFlag = false;
+    //         }
+    //     } 
+    // }
+    // if(primeFlag == true) {
+    //     document.write("Its Prime Number");
+    // } else {
+    //     document.write("Its Not a Prime Number");
+    // }
+
+    // Pattern
+    // var counter = 0
+    // for(var i=0; i<=3; i++) {
+    //     for(var j=0; j<=i; j++) {
+    //         counter++;
+    //         document.write(counter);
+    //     }
+    //     document.write("<br>");
+    // }
+
+    // remove duplicate
+    var arr = [1,2,3,4,5];
+    // for(var i=0; i<arr.length; i++) {
+    //     for(var j=i+1; j<arr.length; j++) {
+    //         if(arr[i] == arr[j]) {
+    //             arr.splice(i,1);
+    //         }
+    //     }
+    // }
+
+    // reverse
+    // var counter = arr.length-1;
+    // var temp = []
+    // for(var i=0;i<arr.length;i++) {
+    //     temp[counter] = arr[i];
+    //     counter--;
+    // }
+    // document.write(temp);
+
+    var arr = [0,1];
+    for(var i=0; i<10; i++) {
+        arr[arr.length] = arr[arr.length-1] + arr[arr.length-2];
+    }
+    document.write(arr)
+</script>

@@ -1,0 +1,17 @@
+Prime Number
+<script>
+    var count=0;
+    function checkPrimeNumber(num) {
+        for(var i=1; i<=num; i++) {
+            if(num % i == 0) {
+                count++;
+            }
+        }
+        if(count == 2) {
+            console.log("Its Prime number");
+        } else {
+            console.log("Its not Prime number");
+        }
+    }
+    checkPrimeNumber(7);
+</script>

@@ -1,0 +1,17 @@
+<div id="demo"></div>
+<script>
+function factorial(number) {
+  var num=number-1;
+  while (num!=0) {
+    number *= num;
+
+    // number = number * num;
+
+    // fact = number * num;
+    // number = fact;
+    num--;
+  }
+  return number;
+}
+document.getElementById("demo").innerHTML = factorial(5);
+</script>

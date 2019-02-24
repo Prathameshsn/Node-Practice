@@ -1,0 +1,16 @@
+<link rel="stylesheet" href="box.css"></link>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="box.controller.js"></script>
+
+<body style="background-color:teal" style="margin:auto">
+    <h2>Select the Box which have its top,bottom,left and right boxes are unselectable.</h2>
+    <div ng-app="myApp" ng-controller="boxController">
+        <div ng-repeat="box in boxParts" ng-init="parentIndex=$index">
+            <div ng-repeat="data in box" style="display:inline-block">
+                <div  id="{{parentIndex+'_'+$index}}" class="defaultSquare" ng-click="onBoxClick(parentIndex,$index)"></div>
+            </div>
+        </div>
+    </div>
+</body>

@@ -1,0 +1,21 @@
+<!-- Get the id name from child class -->
+<div id="pratu">
+    <div class="sam"></div>
+    <input name="a" type="number"> +
+<input name="b" type="number"> =
+<output name="o" for="a b"></output>  
+
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script>    
+    // with jQuery
+    var id = $(".sam");
+    console.log(id.parent()[0].id);
+    console.log(id[0].parentNode.id);
+
+    // with javascript
+    var id = document.getElementsByClassName("sam");
+    console.log(id[0].parentNode.id);
+</script>

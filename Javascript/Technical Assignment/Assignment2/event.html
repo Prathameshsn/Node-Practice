@@ -1,0 +1,20 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<body>
+    <h2>Enter on DIV to see its ID Name.</h2>
+    <div id="div-one" style="height:300px;width:300px;border-style: solid;margin:auto">div-one
+        <div id="div-two" style="height:200px;width:200px;border-style: solid;margin:auto">div-two
+            <div id="div-three" style="height:100px;width:100px;border-style:solid;margin:auto">div-three
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var testClick = function(event) {
+            event.stopPropagation();
+            alert("Clicked ID: "+event.currentTarget.id);
+        }
+        
+        $("div").on("click", testClick);
+    </script>
+</body>

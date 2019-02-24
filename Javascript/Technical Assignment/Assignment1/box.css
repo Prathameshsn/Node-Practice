@@ -1,0 +1,12 @@
+.defaultSquare {
+    height: 50px;
+    width: 50px;
+    background-color:white;
+    border-style: solid;
+  }
+  .selectedSquare {
+    height: 50px;
+    width: 50px;
+    background-color:red;
+    border-style: solid;
+  }

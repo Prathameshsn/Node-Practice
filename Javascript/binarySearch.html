@@ -1,0 +1,28 @@
+<script>
+// Search 2 in array
+var arr=[7,2,4,3,9,12,6];
+
+var element = 4;
+var start = 0;
+var end = arr.length;
+var mid;
+
+for (var i = 0; i < end; i++) {
+  if(arr[i] == element) {
+    mid = Math.round(end/2)-1;
+    if(arr[mid] == element) {
+      console.log("Element found at "+mid);
+      break;
+    }
+    if(i < mid) {
+      end = mid;
+    } else {
+      start = mid;
+    }
+    for (var j = start; j < end; j++) {
+      if()
+    }
+  }
+}
+
+</script>
